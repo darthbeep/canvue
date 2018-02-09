@@ -5,13 +5,15 @@
         <title>This is my thing</title>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     </head>
-    <body>
+    <body onload="recurse()">
         <div id="app">
             <canvas id="canvas" width="300" height="300"></canvas>
-            <vbutton v-for="i in buttons.length -1" v-bind:id="buttons[i]" v-bind:texts="buttons[i]" v-bind:onclick="onclicks[i]">
-                {{ buttons[i] }}
+            <vbutton v-for="i in buttons.length -1" v-bind:id="buttons[i]" v-bind:texts="bnames[i]" v-bind:onclick="onclicks[i]">
+                {{ bnames[i] }}
             </vbutton>
         </div>
     </body>
     <script src="canvue.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    </script>
 </html>
