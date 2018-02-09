@@ -8,8 +8,8 @@
     <body>
         <div id="app">
             <canvas id="canvas" width="300" height="300"></canvas>
-            <vbutton v-for="button in buttons" v-bind:id="button.text" v-bind:texts="button">
-                {{ button.text }}
+            <vbutton v-for="i in buttons.length -1" v-bind:id="buttons[i]" v-bind:texts="buttons[i]" v-bind:onclick="onclicks[i]">
+                {{ buttons[i] }}
             </vbutton>
         </div>
     </body>

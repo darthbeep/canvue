@@ -1,18 +1,17 @@
+buttonlist = ['', 'size', 'mine', 'dvd', 'test']
 //Vue stuff
 
 Vue.component('vbutton', {
     props: ['texts'],
-    template: '<button>{{ texts.text }}</button>'
+    template: '<button>{{ texts }}</button>'
 })
 
 var app = new Vue({
     el: "#app",
     data: {
         canvas: '<canvas></canvas>',
-        buttons: [
-            {text: "animate"},
-            {text: "button"}
-        ]
+        buttons: buttonlist,
+        onclicks: buttonlist.map(i=>i+"()")
     }
 })
 
